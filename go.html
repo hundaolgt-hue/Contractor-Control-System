@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Opening secure checkout… · Rapha ProjectControl</title>
+<noscript><meta http-equiv="refresh" content="0;url=https://ye-buna.com/hundaolgirma?ref=product_detail&amp;product=6abe27740bdd7_hundaolgirma"></noscript>
+<script>
+/* ============ TRACKING CONFIG — keep in sync with /index.html ============ */
+window.RAPHA = {
+  PIXEL_ID: "YOUR_PIXEL_ID",
+  PRODUCT: "Rapha ProjectControl",
+  PRODUCT_ID: "6abe27740bdd7_hundaolgirma",
+  PRICE_ETB: 2999,
+  ETB_PER_USD: 163,
+  CHECKOUT: "https://ye-buna.com/hundaolgirma?ref=product_detail&product=6abe27740bdd7_hundaolgirma"
+};
+(function(c){
+  var q=new URLSearchParams(location.search), done=false;
+  var t0=Date.now();
+  function go(){ if(done) return; var w=900-(Date.now()-t0); if(w>0){ setTimeout(go,w); return; } done=true; location.replace(c.CHECKOUT); }
+
+  if(/^\d{6,}$/.test(c.PIXEL_ID)){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;t.onload=function(){setTimeout(go,350)};s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', c.PIXEL_ID);
+    fbq('track', 'PageView');
+    fbq('track', 'InitiateCheckout', {
+      content_name: c.PRODUCT, content_ids: [c.PRODUCT_ID], content_type: 'product', num_items: 1,
+      value: +(c.PRICE_ETB / c.ETB_PER_USD).toFixed(2), currency: 'USD',
+      price_etb: c.PRICE_ETB,
+      cta_location: q.get('cta') || 'direct',
+      utm_source: q.get('utm_source') || '', utm_campaign: q.get('utm_campaign') || '', utm_content: q.get('utm_content') || ''
+    }, { eventID: 'ic_' + Date.now() + '_' + Math.random().toString(36).slice(2,8) });
+    setTimeout(go, 1800);            // safety net if the pixel is blocked or slow
+  } else {
+    setTimeout(go, 900);             // no pixel yet: give Vercel Analytics time to record /go
+  }
+})(window.RAPHA);
+</script>
+<!-- Vercel Web Analytics: every visit to /go = one checkout initiation -->
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+html,body{height:100%;margin:0}
+body{display:grid;place-items:center;background:#07121f;color:#eef3f9;font:500 17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Ethiopic","Nyala",sans-serif;text-align:center;padding:16px}
+.s{width:44px;height:44px;margin:0 auto 22px;border-radius:50%;border:3px solid rgba(245,165,36,.2);border-top-color:#f5a524;animation:r .8s linear infinite}
+@keyframes r{to{transform:rotate(360deg)}}
+small{display:block;color:#9db0c7;margin-top:4px}
+a{display:inline-block;margin-top:22px;color:#1a1203;background:#f5a524;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600}
+@media (prefers-reduced-motion:reduce){.s{animation:none}}
+</style>
+</head>
+<body>
+<div>
+  <div class="s" aria-hidden="true"></div>
+  Opening secure checkout…
+  <small>ወደ ክፍያ ገጽ በመሄድ ላይ…</small>
+  <a href="https://ye-buna.com/hundaolgirma?ref=product_detail&amp;product=6abe27740bdd7_hundaolgirma" onclick="this.textContent='…'">Continue to Ye-buna →</a>
+</div>
+</body>
+</html>
